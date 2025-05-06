@@ -10,8 +10,12 @@ The script keeps only the 10 most recent backups for each database, deleting old
 
 ### Step 1:
  Open the databases.conf file and list the details of all the databases you want to back up.
-
 Each line in the file should describe one database using the correct format (MySQL or SQLite).
+
+Make sure to give the `multi_db_backup.sh` script permission to run by executing this command in your terminal: 
+```
+chmod +x multi_db_backup.sh
+```
 
 ### Step 2:
  Use crontab to schedule the script so it runs every day automatically.
