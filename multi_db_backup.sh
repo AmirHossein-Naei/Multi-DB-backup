@@ -1,7 +1,8 @@
 #!/bin/bash
 
-BACKUP_DIR="$(pwd)/backup_files"
-CONFIG_FILE="$(dirname "$0")/databases.conf"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+BACKUP_DIR="$SCRIPT_DIR/backup_files"
+CONFIG_FILE="$SCRIPT_DIR/databases.conf"
 mkdir -p "$BACKUP_DIR"
 
 while IFS=':' read -r type name user pass path || [[ -n "$type" ]]; do
